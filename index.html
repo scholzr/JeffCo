@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 	 
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Jefferson County Fire</title>
+<link href="jquery-mobile/jquery.mobile-1.2.0.min.css" rel="stylesheet" />
+<link href="jquery-mobile/ios_inspired/styles.css" rel="stylesheet" />
+<script src="jquery-mobile/jquery-1.7.1.min.js"></script>
+<script>
+    // all dialog buttons should close their parent dialog
+    $(".ui-dialog button").live("click", function() {		
+        $("[data-role='dialog']").dialog("close");		
+    });
+    $(document).on("mobileinit", function(){
+      $.mobile.defaultPageTransition = "slide";
+    });
+</script> 
+<script src="jquery-mobile/jquery.mobile-1.2.0.min.js"></script>
+<script type="text/javascript" src="js/polymaps/polymaps.js"></script>
+<style type="text/css">
+	@import url("js/polymaps/examples/example.css");
+</style>
+</head> 
+<body>
+<div data-role="page" id="Hydrants"> 
+ 
+	<div data-role="header" data-position="fixed" id="HydrantHead"> 
+		<h1>Hydrants</h1>
+	</div><!-- /header --> 
+ 
+	<div data-role="content" id="HydrantBody"> 
+        <div id="map"></div>
+	</div><!-- /ui-body wrapper -->	
+    
+	<div data-role="footer" data-position="fixed" id="HydrantFoot">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#Hydrants" id="tabA" data-icon="custom" class="ui-btn-active">Hydrants</a></li>
+				<li><a href="#SOG" id="tabB" data-icon="custom">SOG</a></li>
+				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
+				<li><a href="#Location" id="tabD" data-icon="custom">Location</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page --> 
+
+<div data-role="page" id="SOG"> 
+	<div data-role="header" data-position="fixed" id="SOGHead"> 
+		<h1>SOG</h1>
+	</div><!-- /header --> 
+ 
+	<div data-role="content" id="SOGBody"> 
+	</div><!-- /ui-body wrapper -->	
+    
+	<div data-role="footer" data-position="fixed" id="SOGFoot">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
+				<li><a href="#SOG" id="tabB" data-icon="custom" class="ui-btn-active">SOG</a></li>
+				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
+				<li><a href="#Location" id="tabD" data-icon="custom">Location</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page --> 
+
+<div data-role="page" id="PrePlan"> 
+	<div data-role="header" data-position="fixed" id="SOGHead"> 
+		<h1>Pre-Plans</h1>
+	</div><!-- /header --> 
+ 
+	<div data-role="content" id="SOGBody"> 
+	</div><!-- /ui-body wrapper -->	
+    
+	<div data-role="footer" data-position="fixed" id="SOGFoot">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
+				<li><a href="#SOG" id="tabB" data-icon="custom">SOG</a></li>
+				<li><a href="#PrePlan" id="tabC" data-icon="custom" class="ui-btn-active">Pre-Plan</a></li>
+				<li><a href="#Location" id="tabD" data-icon="custom">Location</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page --> 
+
+<div data-role="page" id="SOG"> 
+	<div data-role="header" data-position="fixed" id="SOGHead"> 
+		<h1>SOG</h1>
+	</div><!-- /header --> 
+ 
+	<div data-role="content" id="SOGBody"> 
+	</div><!-- /ui-body wrapper -->	
+    
+	<div data-role="footer" data-position="fixed" id="SOGFoot">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
+				<li><a href="#SOG" id="tabB" data-icon="custom">SOG</a></li>
+				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
+				<li><a href="#Location" id="tabD" data-icon="custom" class="ui-btn-active">Location</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page --> 
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
