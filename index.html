@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 	 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Jefferson County Fire</title>
-<link href="jquery-mobile/jquery.mobile-1.2.0.min.css" rel="stylesheet" />
+<link href="jquery-mobile/jquery.mobile-1.3.1.min.css" rel="stylesheet" />
 <link href="jquery-mobile/ios_inspired/styles.css" rel="stylesheet" />
 <script src="jquery-mobile/jquery-1.7.1.min.js"></script>
 <script>
@@ -17,7 +17,7 @@
       $.mobile.defaultPageTransition = "slide";
     });
 </script> 
-<script src="jquery-mobile/jquery.mobile-1.2.0.min.js"></script>
+<script src="jquery-mobile/jquery.mobile-1.3.1.min.js"></script>
 <script type="text/javascript" src="js/polymaps/polymaps.js"></script>
 <style type="text/css">
 	@import url("js/polymaps/examples/example.css");
@@ -34,7 +34,7 @@
         <div id="map"></div>
 	</div><!-- /ui-body wrapper -->	
     
-	<div data-role="footer" data-position="fixed" id="HydrantFoot">
+	<div data-role="footer" data-position="fixed" id="foot">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#Hydrants" id="tabA" data-icon="custom" class="ui-btn-active">Hydrants</a></li>
@@ -54,7 +54,7 @@
 	<div data-role="content" id="SOGBody"> 
 	</div><!-- /ui-body wrapper -->	
     
-	<div data-role="footer" data-position="fixed" id="SOGFoot">
+	<div data-role="footer" data-position="fixed" id="foot">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
@@ -74,7 +74,7 @@
 	<div data-role="content" id="PrePlanBody"> 
 	</div><!-- /ui-body wrapper -->	
     
-	<div data-role="footer" data-position="fixed" id="PrePlanFoot">
+	<div data-role="footer" data-position="fixed" id="foot">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
@@ -107,7 +107,7 @@
         <a href="javascript:PositionRefresh()" data-icon="refresh" data-role="button">Refresh</a>
 	</div><!-- /ui-body wrapper -->	
     
-	<div data-role="footer" data-position="fixed" id="GPSFoot">
+	<div data-role="footer" data-position="fixed" id="foot">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
