@@ -104,6 +104,7 @@
             <li><b>Heading:</b> <span id="HeadingSpan"></span>&deg;</li>
             <li><b>Speed:</b> <span id="SpeedSpan"></span>mph</li>
         </ul>
+        <a href="javascript:PositionRefresh()" data-icon="refresh" data-role="button">Refresh</a>
 	</div><!-- /ui-body wrapper -->	
     
 	<div data-role="footer" data-position="fixed" id="GPSFoot">
@@ -114,11 +115,10 @@
 				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
 				<li><a href="#Location" id="tabD" data-icon="custom" class="ui-btn-active">Location</a></li>
 			</ul>
-            <a href="javascript:GeoSuccess()" data-role="button">Refresh</a>
 		</div><!-- /navbar -->
 	</div><!-- /footer -->
 </div><!-- /page --> 
-
+<script type="text/javascript" src="js/location.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

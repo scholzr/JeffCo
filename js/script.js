@@ -34,6 +34,9 @@ $("div#Location").live("pageshow", function() {
 	navigator.geolocation.getCurrentPosition(GeoSuccess, GeoError, {enableHighAccuracy: true});
 });
 
+function PositionRefresh() { 
+	navigator.geolocation.getCurrentPosition(GeoSuccess, GeoError, {enableHighAccuracy: true});
+}
 function GeoSuccess(position) {
 	var Lat = position.coords.latitude;
 	var Lon = position.coords.longitude;
@@ -49,8 +52,8 @@ function GeoSuccess(position) {
 	AAc = AAc * 3.28084;
 	Spe = Spe * 2.23694;
 	
-	document.getElementById("LatitudeSpan").innerHTML = Lat;
-	document.getElementById("LongitudeSpan").innerHTML = Lon;
+	document.getElementById("LatitudeSpan").innerHTML = LocationFormatter.decimalLatToDMS(Lat, LocationFormatter.SOUTH);
+	document.getElementById("LongitudeSpan").innerHTML = LocationFormatter.decimalLongToDMS(Lon, LocationFormatter.WEST);
 	document.getElementById("LAccuracySpan").innerHTML = Math.round(LAc);
 	document.getElementById("AltitudeSpan").innerHTML = Math.round(Alt);
 	document.getElementById("AAccuracySpan").innerHTML = Math.round(AAc);
