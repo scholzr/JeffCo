@@ -1,6 +1,6 @@
 /* === PAGE BACKGROUND AND GENERICS === */
 .ui-page, .ui-mobile-viewport {
-	background: url(jquery-mobile/ios_inspired/images/tiling_stripes.gif);
+	background: url(images/tiling_stripes.gif);
 }
 
 .ui-content {
@@ -156,7 +156,7 @@
 }
 
 .ui-listview .ui-icon-arrow-r {
-	background: transparent url(jquery-mobile/ios_inspired/images/arrow_right.png) center center no-repeat !important;
+	background: transparent url(images/arrow_right.png) center center no-repeat !important;
 		-webkit-border-radius: 0;
 		-moz-border-radius: 0;
 		border-radius: 0;
@@ -378,7 +378,7 @@ div.ui-btn .ui-btn-inner {
 
 /* === BACK BUTTON === */
 a[data-rel='back'], .ui-header a[data-rel='back'] {
-	background: transparent url(jquery-mobile/ios_inspired/images/backButtonSprite.png) 0 0 no-repeat !important;
+	background: transparent url(images/backButtonSprite.png) 0 0 no-repeat !important;
 		-webkit-box-shadow: none !important; 
 		-moz-box-shadow: none !important; 
 		box-shadow: none !important;
@@ -390,7 +390,7 @@ a[data-rel='back'], .ui-header a[data-rel='back'] {
 }
 
 a[data-rel='back'] .ui-btn-inner {
-	background: transparent url(jquery-mobile/ios_inspired/images/backButtonSprite.png) right 0 no-repeat !important;
+	background: transparent url(images/backButtonSprite.png) right 0 no-repeat !important;
 	margin: 0 0 0 15px;
 	padding: 0 8px 0 0 !important;
 	height: 30px;
@@ -515,7 +515,7 @@ input.ui-input-text, .ui-input-search {
 }
 
 .ui-input-clear {
-	background: transparent url(jquery-mobile/ios_inspired/images/iconSprite.png) 0 0 no-repeat;
+	background: transparent url(images/iconSprite.png) 0 0 no-repeat;
 	width: 19px;
 	height: 19px;
 	border: none;
@@ -701,11 +701,11 @@ input.ui-input-text, .ui-input-search {
 /* === RETINA DEVICE FIXES === */
 @media (-webkit-min-device-pixel-ratio : 1.5), (min-device-pixel-ratio : 1.5) {
 	.ui-listview .ui-icon-arrow-r {
-		background-image: url(jquery-mobile/ios_inspired/images/arrow_right@2x.png) !important;
+		background-image: url(images/arrow_right@2x.png) !important;
 		background-size: 9.5px 14px;
 	}
 	a[data-rel='back'], .ui-header a[data-rel='back'], a[data-rel="back"] .ui-btn-inner {
-		background-image: url(jquery-mobile/ios_inspired/images/backButtonSprite@2x.png) !important;
+		background-image: url(images/backButtonSprite@2x.png) !important;
 		background-size: 500px 60px;
 	}
 	.ui-input-clear {

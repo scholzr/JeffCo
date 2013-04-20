@@ -43,26 +43,24 @@ function GeoSuccess(position) {
 	var Alt = position.coords.altitude;
 	var LAc = position.coords.accuracy;
 	var AAc = position.coords.altitudeAccuracy;
-	var Hea = position.coords.heading;
-	var Spe = position.coords.speed;
 	
 	//Convert to SAE
 	Alt = Alt * 3.28084;
 	LAc = LAc * 3.28084;
 	AAc = AAc * 3.28084;
-	Spe = Spe * 2.23694;
 	
 	document.getElementById("LatitudeSpan").innerHTML = LocationFormatter.decimalLatToDMS(Lat, LocationFormatter.SOUTH);
 	document.getElementById("LongitudeSpan").innerHTML = LocationFormatter.decimalLongToDMS(Lon, LocationFormatter.WEST);
 	document.getElementById("LAccuracySpan").innerHTML = Math.round(LAc);
 	document.getElementById("AltitudeSpan").innerHTML = Math.round(Alt);
 	document.getElementById("AAccuracySpan").innerHTML = Math.round(AAc);
-	document.getElementById("HeadingSpan").innerHTML = Hea;
-	document.getElementById("SpeedSpan").innerHTML = Math.round(Spe);
 }
 
 function GeoError() {
 	alert('Error!');
 }
 
-
+$("div#viewer").live("pageshow", function() {
+	//Resize Map Div
+	$("#viewerIF").height($(window).height() - $("#ViewerHead").height() - 35);
+});

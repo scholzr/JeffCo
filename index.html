@@ -71,7 +71,11 @@
 		<h1>Pre-Plans</h1>
 	</div><!-- /header --> 
  
-	<div data-role="content" id="PrePlanBody"> 
+	<div data-role="content" id="PrePlanBody">
+     	<ul data-role="listview" data-filter="true" data-filter-placeholder="Search Pre-Plans..." data-inset="true">
+        	<li>Preplan #1</li>
+            <li>Preplan #2</li>
+        </ul>
 	</div><!-- /ui-body wrapper -->	
     
 	<div data-role="footer" data-position="fixed" id="foot">
@@ -93,16 +97,13 @@
  
 	<div data-role="content" id="GPSBody"> 
     	<ul data-role="listview" data-inset="true">
-        	<li data-role="list-divider">Location</li>
+        	<li data-role="list-divider">Coordinates</li>
             <li><b>Latitude:</b> <span id="LatitudeSpan"></span></li>
             <li><b>Longitude:</b> <span id="LongitudeSpan"></span></li>
             <li><b>Accuracy:</b> <span id="LAccuracySpan"></span>'</li>
             <li data-role="list-divider">Altitude</li>
             <li><b>Altitude:</b> <span id="AltitudeSpan"></span>'</li>
             <li><b>Accuracy:</b> <span id="AAccuracySpan"></span>'</li>
-            <li data-role="list-divider">Heading</li>
-            <li><b>Heading:</b> <span id="HeadingSpan"></span>&deg;</li>
-            <li><b>Speed:</b> <span id="SpeedSpan"></span>mph</li>
         </ul>
         <a href="javascript:PositionRefresh()" data-icon="refresh" data-role="button">Refresh</a>
 	</div><!-- /ui-body wrapper -->	
@@ -118,6 +119,16 @@
 		</div><!-- /navbar -->
 	</div><!-- /footer -->
 </div><!-- /page --> 
+
+<div data-role="page" id="viewer">
+	<div data-role="header" data-position="fixed" id="ViewerHead"> 
+		<h1>Document Title</h1>
+        <a href="#" data-rel="back" data-icon="arrow-l" data-theme="a">Back</a>
+	</div><!-- /header --> 
+    <div data-role="content">
+    	<iframe id="viewerIF" src="http://docs.google.com/gview?url=http://ryanscholzdvm.com/JeffCo/test.pdf&embedded=true" style="width:100%;" frameborder="0"></iframe>
+    </div>
+</div>
 <script type="text/javascript" src="js/location.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </body>
