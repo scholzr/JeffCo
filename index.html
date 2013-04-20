@@ -67,14 +67,14 @@
 </div><!-- /page --> 
 
 <div data-role="page" id="PrePlan"> 
-	<div data-role="header" data-position="fixed" id="SOGHead"> 
+	<div data-role="header" data-position="fixed" id="PrePlanHead"> 
 		<h1>Pre-Plans</h1>
 	</div><!-- /header --> 
  
-	<div data-role="content" id="SOGBody"> 
+	<div data-role="content" id="PrePlanBody"> 
 	</div><!-- /ui-body wrapper -->	
     
-	<div data-role="footer" data-position="fixed" id="SOGFoot">
+	<div data-role="footer" data-position="fixed" id="PrePlanFoot">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
@@ -86,15 +86,27 @@
 	</div><!-- /footer -->
 </div><!-- /page --> 
 
-<div data-role="page" id="SOG"> 
-	<div data-role="header" data-position="fixed" id="SOGHead"> 
-		<h1>SOG</h1>
+<div data-role="page" id="Location"> 
+	<div data-role="header" data-position="fixed" id="GPSHead"> 
+		<h1>Location</h1>
 	</div><!-- /header --> 
  
-	<div data-role="content" id="SOGBody"> 
+	<div data-role="content" id="GPSBody"> 
+    	<ul data-role="listview" data-inset="true">
+        	<li data-role="list-divider">Location</li>
+            <li><b>Latitude:</b> <span id="LatitudeSpan"></span></li>
+            <li><b>Longitude:</b> <span id="LongitudeSpan"></span></li>
+            <li><b>Accuracy:</b> <span id="LAccuracySpan"></span>'</li>
+            <li data-role="list-divider">Altitude</li>
+            <li><b>Altitude:</b> <span id="AltitudeSpan"></span>'</li>
+            <li><b>Accuracy:</b> <span id="AAccuracySpan"></span>'</li>
+            <li data-role="list-divider">Heading</li>
+            <li><b>Heading:</b> <span id="HeadingSpan"></span>&deg;</li>
+            <li><b>Speed:</b> <span id="SpeedSpan"></span>mph</li>
+        </ul>
 	</div><!-- /ui-body wrapper -->	
     
-	<div data-role="footer" data-position="fixed" id="SOGFoot">
+	<div data-role="footer" data-position="fixed" id="GPSFoot">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>

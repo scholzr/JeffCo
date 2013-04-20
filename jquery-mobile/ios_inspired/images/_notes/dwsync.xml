@@ -13,4 +13,8 @@
 <file name="cabinet_open.png" server="ryanscholzdvm.com//JeffCo/" local="130105368311004656" remote="130105377000000000" Dst="2" />
 <file name="gps.png" server="ryanscholzdvm.com//JeffCo/" local="130105368012647359" remote="130105377000000000" Dst="2" />
 <file name="location_pin.png" server="ryanscholzdvm.com//JeffCo/" local="130105367941758505" remote="130105377000000000" Dst="2" />
+<file name="location_pin.png" server="W:/JeffCo/" local="130105367941758505" remote="130105367940000000" Dst="2" />
+<file name="cabinet_open.png" server="W:/JeffCo/" local="130105368311004656" remote="130105368310000000" Dst="2" />
+<file name="briefcase_document.png" server="W:/JeffCo/" local="130105368218703306" remote="130105368210000000" Dst="2" />
+<file name="gps.png" server="W:/JeffCo/" local="130105368012647359" remote="130105368010000000" Dst="2" />
 </dwsync>

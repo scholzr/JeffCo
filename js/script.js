@@ -29,4 +29,37 @@ $("div#Hydrants").live("pageshow", function() {
 
 });
 
+//Location Page
+$("div#Location").live("pageshow", function() {
+	navigator.geolocation.watchPosition(GeoSuccess, GeoError, {enableHighAccuracy: true});
+});
+
+function GeoSuccess(position) {
+	var Lat = position.coords.latitude;
+	var Lon = position.coords.longitude;
+	var Alt = position.coords.altitude;
+	var LAc = position.coords.accuracy;
+	var AAc = position.coords.altitudeAccuracy;
+	var Hea = position.coords.heading;
+	var Spe = position.coords.speed;
+	
+	//Convert to SAE
+	Alt = Alt * 3.28084;
+	LAc = LAc * 3.28084;
+	AAc = AAc * 3.28084;
+	Spe = Spe * 2.23694;
+	
+	document.getElementById("LatitudeSpan").innerHTML = Lat;
+	document.getElementById("LongitudeSpan").innerHTML = Lon;
+	document.getElementById("LAccuracySpan").innerHTML = Math.round(LAc);
+	document.getElementById("AltitudeSpan").innerHTML = Math.round(Alt);
+	document.getElementById("AAccuracySpan").innerHTML = Math.round(AAc);
+	document.getElementById("HeadingSpan").innerHTML = Hea;
+	document.getElementById("SpeedSpan").innerHTML = Math.round(Spe);
+}
+
+function GeoError() {
+	alert('Error!');
+}
+
 
