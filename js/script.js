@@ -5,6 +5,8 @@ $("div#Hydrants").live("pageshow", function() {
 	//Resize Map Div
 	$("#map").height($(window).height() - $("#HydrantHead").height() - $("#HydrantFoot").height() - 35);
 	
+	document.getElementById("map").innerHTML = ""
+	
 	//Initialize map
 	var po = org.polymaps;
 	
