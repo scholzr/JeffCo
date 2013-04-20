@@ -31,7 +31,7 @@ $("div#Hydrants").live("pageshow", function() {
 
 //Location Page
 $("div#Location").live("pageshow", function() {
-	navigator.geolocation.watchPosition(GeoSuccess, GeoError, {enableHighAccuracy: true});
+	navigator.geolocation.getCurrentPosition(GeoSuccess, GeoError, {enableHighAccuracy: true});
 });
 
 function GeoSuccess(position) {
