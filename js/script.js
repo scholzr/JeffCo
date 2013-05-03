@@ -1,7 +1,7 @@
 // Main control file
 
 //Hydrant Page
-$("div#Hydrants").live("pageinit", function() {
+$("div#Hydrants").live("pageshow", function() {
 	//Resize Map Div
 	$("#map-canvas").height($(window).height() - $("#HydrantHead").height() - $("#foot").height() - 35);
 	
