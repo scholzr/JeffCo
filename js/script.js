@@ -66,3 +66,7 @@ $("div#viewer").live("pageshow", function() {
 	//Resize Map Div
 	$("#viewerIF").height($(window).height() - $("#ViewerHead").height() - 35);
 });
+
+function OpenPage(url) {
+	var ref = window.open(url, '_blank');
+}
