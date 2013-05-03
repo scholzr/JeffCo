@@ -1,7 +1,7 @@
 // Main control file
 
 //Hydrant Page
-$("div#Hydrants").live("pageshow", function() {
+$("div#Hydrants").live("pageinit", function() {
 	//Resize Map Div
 	$("#map-canvas").height($(window).height() - $("#HydrantHead").height() - $("#foot").height() - 35);
 	
@@ -104,3 +104,30 @@ $("div#viewer").live("pageshow", function() {
 function OpenPage(url) {
 	var ref = window.open(url, '_blank');
 }
+
+function RefreshMap() {
+var map;
+  var mapOptions = {
+    zoom: 15,
+    //center: new google.maps.LatLng(44.6251, -121.1295),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+	  // Try HTML5 geolocation
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = new google.maps.LatLng(position.coords.latitude,
+                                       position.coords.longitude);
+
+      map.setCenter(pos);
+	  
+    }, function() {
+      handleNoGeolocation(true);
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleNoGeolocation(false);
+  }
+};
