@@ -3,33 +3,67 @@
 //Hydrant Page
 $("div#Hydrants").live("pageshow", function() {
 	//Resize Map Div
-	$("#map").height($(window).height() - $("#HydrantHead").height() - $("#foot").height() - 35);
+	$("#map-canvas").height($(window).height() - $("#HydrantHead").height() - $("#foot").height() - 35);
 	
-	document.getElementById("map").innerHTML = ""
-	
-	//Initialize map
-	var po = org.polymaps;
-	
-	var map = po.map()
-		.container(document.getElementById("map").appendChild(po.svg("svg")))
-		.center({ lat: 44.6251, lon: -121.1295 })
-		.zoom(14.5)
-		.add(po.interact())
-	
-	map.add(po.image()
-		.url(po.url("http://{S}tile.cloudmade.com"
-		+ "/1a1b06b230af4efdbb989ea99e9841af" // http://cloudmade.com/register
-		+ "/998/256/{Z}/{X}/{Y}.png")
-		.hosts(["a.", "b.", "c.", ""])));
-		
-	map.add(po.geoJson()
-		.features([{geometry: {coordinates: [-121.1295, 44.6251], type: "Point"}}])
-		); 
+	document.getElementById("map-canvas").innerHTML = ""
+var map;
+  var mapOptions = {
+    zoom: 15,
+    //center: new google.maps.LatLng(44.6251, -121.1295),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
 
-	map.add(po.compass()
-		.pan("none"));
+  // Try HTML5 geolocation
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = new google.maps.LatLng(position.coords.latitude,
+                                       position.coords.longitude);
+
+      map.setCenter(pos);
+	  
+    }, function() {
+      handleNoGeolocation(true);
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleNoGeolocation(false);
+  }
+
+var green = 'icons/green.fw.png';
+var yellow = 'icons/yellow.fw.png';
+var red = 'icons/red.fw.png';
+  var myLatLng = new google.maps.LatLng(44.6251, -121.1295);
+  var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: green
+  });
+  var myLatLng = new google.maps.LatLng(44.6261, -121.1295);
+  var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: yellow
+  });
+  var myLatLng = new google.maps.LatLng(44.6271, -121.1295);
+  var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: red
+  });
 
 });
+
+function handleNoGeolocation(errorFlag) {
+  var options = {
+    map: map,
+    position: new google.maps.LatLng(44.6251, -121.1295),
+    content: content
+  };
+
+  map.setCenter(options.position);
+}
 
 //Location Page
 $("div#Location").live("pageshow", function() {
