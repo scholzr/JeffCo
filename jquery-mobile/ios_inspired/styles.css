@@ -654,7 +654,7 @@ input.ui-input-text, .ui-input-search {
 	box-shadow: none;
 }
 	#tabA .ui-icon {
-		background: url(images/location_pin.png) no-repeat;
+		background: url(images/fire_hydrant.png) no-repeat;
 	}
 	#tabB .ui-icon {
 		background: url(images/cabinet_open.png) no-repeat;
@@ -663,7 +663,7 @@ input.ui-input-text, .ui-input-search {
 		background: url(images/briefcase_document.png) no-repeat;
 	}
 	#tabD .ui-icon {
-		background: url(images/gps.png) no-repeat;
+		background: url(images/location_pin.png) no-repeat;
 	}
 
 /* === UI POPUPS === */
