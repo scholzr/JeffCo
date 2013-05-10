@@ -25,5 +25,7 @@ Ryan Scholz, DVM
 <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
 <icon src="icons/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
 
+<gap:plugin name="ChildBrowser" /> <!-- latest release -->
+
 <access origin="*"  browserOnly="true" /> 
 </widget>
