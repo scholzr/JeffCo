@@ -11,7 +11,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script>
     // all dialog buttons should close their parent dialog
-    $(".ui-dialog button").on("click", function() {		
+    $(document).on("click", ".ui-dialog button", function() {		
         $("[data-role='dialog']").dialog("close");		
     });
     $(document).on("mobileinit", function(){
@@ -19,8 +19,8 @@
     });
 </script> 
 <script src="jquery-mobile/jquery.mobile-1.3.1.min.js"></script>
-<!-- <script src="phonegap.js"></script>
-<script src="childbrowser.js"></script>-->
+<script src="phonegap.js"></script>
+<script src="childbrowser.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <style type="text/css">
 	@import url("js/polymaps/examples/example.css");
@@ -42,7 +42,7 @@
 	<div data-role="footer" data-position="fixed" id="foot">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#Hydrants" id="tabA" data-icon="custom" class="ui-btn-active">Hydrants</a></li>
+				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
 				<li><a href="#SOG" id="tabB" data-icon="custom">SOG</a></li>
 				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
 				<li><a href="#Location" id="tabD" data-icon="custom">Location</a></li>
@@ -59,12 +59,11 @@
 	<div data-role="content" id="SOGBody"> 
      	<ul data-role="listview" data-filter="true" data-filter-placeholder="Search SOGs..." data-inset="true">
         	<li data-role="list-divider">Section 1</li>
-            <li><a href="javascript:window.plugins.childBrowser.showWebPage('http://ryanscholzdvm.com/JeffCo/test.pdf',
-                                        { showLocationBar: true });">1.1 - Name</a></li>
-            <li><a href="javascript:OpenPage('http://ryanscholzdvm.com/JeffCo/test.pdf')">1.2 - Name</a></li>
+            <li><a href="javascript:window.plugins.childBrowser.showWebPage('test.pdf', { showLocationBar: true });">1.1 - Name</a></li>
+            <li><a href="javascript:window.plugins.childBrowser.showWebPage('test.pdf', { showLocationBar: true });">1.2 - Name</a></li>
         	<li data-role="list-divider">Section A</li>
-            <li><a href="javascript:OpenPage('http://ryanscholzdvm.com/JeffCo/test.pdf')">2.1 - Name</a></li>
-            <li><a href="javascript:OpenPage('http://ryanscholzdvm.com/JeffCo/test.pdf')">2.2 - Name</a></li>
+            <li><a href="javascript:window.plugins.childBrowser.showWebPage('test.pdf', { showLocationBar: true });">2.1 - Name</a></li>
+            <li><a href="javascript:window.plugins.childBrowser.showWebPage('test.pdf', { showLocationBar: true });">2.2 - Name</a></li>
         </ul>
 	</div><!-- /ui-body wrapper -->	
     
@@ -72,7 +71,7 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
-				<li><a href="#SOG" id="tabB" data-icon="custom" class="ui-btn-active">SOG</a></li>
+				<li><a href="#SOG" id="tabB" data-icon="custom">SOG</a></li>
 				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
 				<li><a href="#Location" id="tabD" data-icon="custom">Location</a></li>
 			</ul>
@@ -87,8 +86,8 @@
  
 	<div data-role="content" id="PrePlanBody">
      	<ul data-role="listview" data-filter="true" data-filter-placeholder="Search Pre-Plans..." data-inset="true">
-        	<li><a href="javascript:window.open('http://ryanscholzdvm.com/JeffCo/test.pdf', '_blank', 'location=no')">Preplan #1</a></li>
-            <li><a href="javascript:window.open('http://ryanscholzdvm.com/JeffCo/test.pdf', '_blank', 'location=no')">Preplan #2</a></li>
+        	<li><a href="javascript:window.plugins.childBrowser.showWebPage('test.pdf', { showLocationBar: true });">Preplan #1</a></li>
+            <li><a href="javascript:window.plugins.childBrowser.showWebPage('test.pdf', { showLocationBar: true });">Preplan #2</a></li>
         </ul>
 	</div><!-- /ui-body wrapper -->	
     
@@ -97,7 +96,7 @@
 			<ul>
 				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
 				<li><a href="#SOG" id="tabB" data-icon="custom">SOG</a></li>
-				<li><a href="#PrePlan" id="tabC" data-icon="custom" class="ui-btn-active">Pre-Plan</a></li>
+				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
 				<li><a href="#Location" id="tabD" data-icon="custom">Location</a></li>
 			</ul>
 		</div><!-- /navbar -->
@@ -128,21 +127,12 @@
 				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
 				<li><a href="#SOG" id="tabB" data-icon="custom">SOG</a></li>
 				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
-				<li><a href="#Location" id="tabD" data-icon="custom" class="ui-btn-active">Location</a></li>
+				<li><a href="#Location" id="tabD" data-icon="custom">Location</a></li>
 			</ul>
 		</div><!-- /navbar -->
 	</div><!-- /footer -->
 </div><!-- /page --> 
 
-<div data-role="page" id="viewer">
-	<div data-role="header" data-position="fixed" id="ViewerHead"> 
-		<h1>Document Title</h1>
-        <a href="#" data-rel="back" data-icon="arrow-l" data-theme="a">Back</a>
-	</div><!-- /header --> 
-    <div data-role="content">
-    	<iframe id="viewerIF" src="http://docs.google.com/gview?url=http://ryanscholzdvm.com/JeffCo/test.pdf&embedded=true" style="width:100%;" frameborder="0"></iframe>
-    </div>
-</div>
 <script type="text/javascript" src="js/location.js"></script>
 </body>
 </html>
