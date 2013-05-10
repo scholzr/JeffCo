@@ -1,7 +1,9 @@
 // Main control file
 
+$.mobile.defaultPageTransition = "none"
+
 //Hydrant Page
-$("div#Hydrants").live("pageshow", function() {
+$("div#Hydrants").on("pageshow", function() {
 	//Resize Map Div
 	$("#map-canvas").height($(window).height() - $("#HydrantHead").height() - $("#foot").height() - 35);
 	
@@ -66,7 +68,7 @@ function handleNoGeolocation(errorFlag) {
 }
 
 //Location Page
-$("div#Location").live("pageshow", function() {
+$("div#Location").on("pageshow", function() {
 	navigator.geolocation.getCurrentPosition(GeoSuccess, GeoError, {enableHighAccuracy: true});
 });
 
@@ -96,7 +98,7 @@ function GeoError() {
 	alert('Error!');
 }
 
-$("div#viewer").live("pageshow", function() {
+$("div#viewer").on("pageshow", function() {
 	//Resize Map Div
 	$("#viewerIF").height($(window).height() - $("#ViewerHead").height() - 35);
 });

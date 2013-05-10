@@ -7,11 +7,11 @@
 <title>Jefferson County Fire</title>
 <link href="jquery-mobile/jquery.mobile-1.3.1.min.css" rel="stylesheet" />
 <link href="jquery-mobile/ios_inspired/styles.css" rel="stylesheet" />
-<script src="jquery-mobile/jquery-1.7.1.min.js"></script>
+<script src="jquery-mobile/jquery-2.0.0.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script>
     // all dialog buttons should close their parent dialog
-    $(".ui-dialog button").live("click", function() {		
+    $(".ui-dialog button").on("click", function() {		
         $("[data-role='dialog']").dialog("close");		
     });
     $(document).on("mobileinit", function(){
@@ -19,8 +19,8 @@
     });
 </script> 
 <script src="jquery-mobile/jquery.mobile-1.3.1.min.js"></script>
-<script src="phonegap.js"></script>
-<script src="childbrowser.js"></script>
+<!-- <script src="phonegap.js"></script>
+<script src="childbrowser.js"></script>-->
 <script type="text/javascript" src="js/script.js"></script>
 <style type="text/css">
 	@import url("js/polymaps/examples/example.css");
@@ -60,7 +60,7 @@
      	<ul data-role="listview" data-filter="true" data-filter-placeholder="Search SOGs..." data-inset="true">
         	<li data-role="list-divider">Section 1</li>
             <li><a href="javascript:window.plugins.childBrowser.showWebPage('http://ryanscholzdvm.com/JeffCo/test.pdf',
-                                        { showLocationBar: false });">1.1 - Name</a></li>
+                                        { showLocationBar: true });">1.1 - Name</a></li>
             <li><a href="javascript:OpenPage('http://ryanscholzdvm.com/JeffCo/test.pdf')">1.2 - Name</a></li>
         	<li data-role="list-divider">Section A</li>
             <li><a href="javascript:OpenPage('http://ryanscholzdvm.com/JeffCo/test.pdf')">2.1 - Name</a></li>
@@ -107,6 +107,7 @@
 <div data-role="page" id="Location"> 
 	<div data-role="header" data-position="fixed" id="GPSHead"> 
 		<h1>Location</h1>
+        <a href="javascript:PositionRefresh()" data-icon="refresh" class="ui-btn-right">Refresh</a>
 	</div><!-- /header --> 
  
 	<div data-role="content" id="GPSBody"> 
@@ -119,7 +120,6 @@
             <li><b>Altitude:</b> <span id="AltitudeSpan"></span>'</li>
             <li><b>Accuracy:</b> <span id="AAccuracySpan"></span>'</li>
         </ul>
-        <a href="javascript:PositionRefresh()" data-icon="refresh" data-role="button">Refresh</a>
 	</div><!-- /ui-body wrapper -->	
     
 	<div data-role="footer" data-position="fixed" id="foot">
