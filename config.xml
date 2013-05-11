@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "com.JeffCo.Fire"
-    version   = "0.8.2">
+    id        = "com.RyanScholzDVM.Hydrants"
+    version   = "0.8.3">
 
-<name>JeffCo Fire</name>
+<name>Hydrants</name>
 
 <description>
 </description>
 
-<author href="http://ryanscholzdvm.com" email="ryan@willamettews.com">
+<author href="http://RyanScholzDVM.com" email="RyanScholzDVM@gmail.com">
 Ryan Scholz, DVM
 </author>
 
