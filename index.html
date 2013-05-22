@@ -27,83 +27,22 @@
 <div data-role="page" id="Hydrants"> 
  
 	<div data-role="header" data-position="fixed" id="HydrantHead"> 
+        <a href="#Location" data-icon="info">Location</a>
+        <a href="javascript:RefreshMap()" data-icon="refresh">Refresh</a>
 		<h1>Hydrants</h1>
-        <a href="javascript:RefreshMap()" data-icon="refresh" class="ui-btn-right">Refresh</a>
 	</div><!-- /header --> 
  
 	<div data-role="content" id="HydrantBody"> 
 	    <div id="map-canvas" style="height: 100%;">
         </div>
 	</div><!-- /ui-body wrapper -->	
-    
-	<div data-role="footer" data-position="fixed" id="foot">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
-				<li><a href="#SOG" id="tabB" data-icon="custom">SOG</a></li>
-				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
-				<li><a href="#Location" id="tabD" data-icon="custom">Location</a></li>
-			</ul>
-		</div><!-- /navbar -->
-	</div><!-- /footer -->
-</div><!-- /page --> 
-
-<div data-role="page" id="SOG"> 
-	<div data-role="header" data-position="fixed" id="SOGHead"> 
-		<h1>SOG</h1>
-	</div><!-- /header --> 
- 
-	<div data-role="content" id="SOGBody"> 
-     	<ul data-role="listview" data-filter="true" data-filter-placeholder="Search SOGs..." data-inset="true">
-        	<li data-role="list-divider">Section 1</li>
-            <li><a href="javascript:window.plugins.childBrowser.showWebPage('http://ryanscholzdvm.com/JeffCo/test.pdf', { showLocationBar: true });">1.1 - Name</a></li>
-            <li><a href="javascript:window.plugins.childBrowser.showWebPage('http://ryanscholzdvm.com/JeffCo/test.pdf', { showLocationBar: true });">1.2 - Name</a></li>
-        	<li data-role="list-divider">Section A</li>
-            <li><a href="javascript:window.plugins.childBrowser.showWebPage('http://ryanscholzdvm.com/JeffCo/test.pdf', { showLocationBar: true });">2.1 - Name</a></li>
-            <li><a href="javascript:window.plugins.childBrowser.showWebPage('http://ryanscholzdvm.com/JeffCo/test.pdf', { showLocationBar: true });">2.2 - Name</a></li>
-        </ul>
-	</div><!-- /ui-body wrapper -->	
-    
-	<div data-role="footer" data-position="fixed" id="foot">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
-				<li><a href="#SOG" id="tabB" data-icon="custom">SOG</a></li>
-				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
-				<li><a href="#Location" id="tabD" data-icon="custom">Location</a></li>
-			</ul>
-		</div><!-- /navbar -->
-	</div><!-- /footer -->
-</div><!-- /page --> 
-
-<div data-role="page" id="PrePlan"> 
-	<div data-role="header" data-position="fixed" id="PrePlanHead"> 
-		<h1>Pre-Plans</h1>
-	</div><!-- /header --> 
- 
-	<div data-role="content" id="PrePlanBody">
-     	<ul data-role="listview" data-filter="true" data-filter-placeholder="Search Pre-Plans..." data-inset="true">
-        	<li><a href="javascript:window.plugins.childBrowser.showWebPage('http://ryanscholzdvm.com/JeffCo/test.pdf', { showLocationBar: true });">Preplan #1</a></li>
-            <li><a href="javascript:window.plugins.childBrowser.showWebPage('http://ryanscholzdvm.com/JeffCo/test.pdf', { showLocationBar: true });">Preplan #2</a></li>
-        </ul>
-	</div><!-- /ui-body wrapper -->	
-    
-	<div data-role="footer" data-position="fixed" id="foot">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
-				<li><a href="#SOG" id="tabB" data-icon="custom">SOG</a></li>
-				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
-				<li><a href="#Location" id="tabD" data-icon="custom">Location</a></li>
-			</ul>
-		</div><!-- /navbar -->
-	</div><!-- /footer -->
-</div><!-- /page --> 
+    </div><!-- /page --> 
 
 <div data-role="page" id="Location"> 
 	<div data-role="header" data-position="fixed" id="GPSHead"> 
+        <a href="#Hydrants" data-icon="back">Hydrants</a>
+        <a href="javascript:PositionRefresh()" data-icon="refresh">Refresh</a>
 		<h1>Location</h1>
-        <a href="javascript:PositionRefresh()" data-icon="refresh" class="ui-btn-right">Refresh</a>
 	</div><!-- /header --> 
  
 	<div data-role="content" id="GPSBody"> 
@@ -118,16 +57,6 @@
         </ul>
 	</div><!-- /ui-body wrapper -->	
     
-	<div data-role="footer" data-position="fixed" id="foot">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#Hydrants" id="tabA" data-icon="custom">Hydrants</a></li>
-				<li><a href="#SOG" id="tabB" data-icon="custom">SOG</a></li>
-				<li><a href="#PrePlan" id="tabC" data-icon="custom">Pre-Plan</a></li>
-				<li><a href="#Location" id="tabD" data-icon="custom">Location</a></li>
-			</ul>
-		</div><!-- /navbar -->
-	</div><!-- /footer -->
 </div><!-- /page --> 
 
 <script type="text/javascript" src="js/location.js"></script>
